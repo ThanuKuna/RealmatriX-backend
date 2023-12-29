@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from RealmatriX.models import Properties
+from RealmatriX.models import properties
 
 class PropertiesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Properties
+        model = properties
         fields = '__all__'
