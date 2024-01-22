@@ -22,5 +22,7 @@ from RealmatriX import views
 urlpatterns = [
     re_path(r'^property$',views.propertiesApi),
     re_path(r'^property/([a-zA-Z0-9]+)$',views.propertiesApi),
+    re_path(r'^users$',views.usersApi),
+    re_path(r'^users/([a-zA-Z0-9]+)$',views.usersApi),
     path('admin/', admin.site.urls),
 ]
