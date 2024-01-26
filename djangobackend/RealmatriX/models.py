@@ -19,5 +19,10 @@ class users(models.Model):
     phoneno=models.IntegerField()  
     address=models.CharField(max_length=255)  
 
+class User():
+    username = models.CharField(max_length=100, primary_key=True)
+    password = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
+
 
 

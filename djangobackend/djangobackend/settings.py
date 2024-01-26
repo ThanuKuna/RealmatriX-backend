@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'RealmatriX.apps.RealmatrixConfig'
+    'RealmatriX.apps.RealmatrixConfig',
+    'knox',
 ]
 
 MIDDLEWARE = [

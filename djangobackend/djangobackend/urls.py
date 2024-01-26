@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path,re_path
 from django.urls import re_path as url
 from RealmatriX import views
+import knox.views
 
 urlpatterns = [
     re_path(r'^property$',views.propertiesApi),
@@ -25,4 +26,7 @@ urlpatterns = [
     re_path(r'^users$',views.usersApi),
     re_path(r'^users/([a-zA-Z0-9]+)$',views.usersApi),
     path('admin/', admin.site.urls),
+    path('login/', views.login_user, name='login'),
+    path('logout/', knox.views.LogoutView.as_view(), name='logout'),
+    path('check/', views.check_user, name='check token'),
 ]
